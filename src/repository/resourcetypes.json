@@ -1294,8 +1294,8 @@
   {
     "id": 69,
     "resource": "Cdn/profiles",
-    "optional": "UnitDept",
-    "exclude": "Org,Function",
+    "optional": "UnitDept,Function",
+    "exclude": "Org",
     "property": "",
     "ShortName": "afd",
     "scope": "resource group",

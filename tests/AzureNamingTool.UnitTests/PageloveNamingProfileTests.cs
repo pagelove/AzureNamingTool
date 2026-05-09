@@ -37,9 +37,11 @@ public class PageloveNamingProfileTests
         ResourceType(resourceTypes, "Web/serverfarms").GetProperty("exclude").GetString().Should().Be("Org");
         ResourceType(resourceTypes, "Web/sites", "Web App").GetProperty("ShortName").GetString().Should().Be("app");
         ResourceType(resourceTypes, "Web/sites", "Web App").GetProperty("exclude").GetString().Should().Be("Org");
-        ResourceType(resourceTypes, "Cdn/profiles").GetProperty("ShortName").GetString().Should().Be("afd");
-        ResourceType(resourceTypes, "Cdn/profiles/endpoints").GetProperty("ShortName").GetString().Should().Be("afde");
-        ResourceType(resourceTypes, "Network/frontDoors").GetProperty("ShortName").GetString().Should().Be("afd");
+        AssertResourceTypeOverride(resourceTypes, "Cdn/profiles", "", "afd", "Org", "Function");
+        AssertResourceTypeOverride(resourceTypes, "Cdn/profiles/endpoints", "", "afde", "Org", "Function");
+        AssertResourceTypeOverride(resourceTypes, "Network/frontDoors", "", "afd", "Org", "Function");
+        AssertResourceTypeOverride(resourceTypes, "KeyVault/vaults", "", "kv", "Org", "Function");
+        AssertResourceTypeOverride(resourceTypes, "Network/virtualNetworks", "", "vnet", "Org", "Function");
     }
 
     private static JsonDocument LoadJson(string fileName)
@@ -92,5 +94,20 @@ public class PageloveNamingProfileTests
             .Single(item =>
                 item.GetProperty("resource").GetString() == resource &&
                 item.GetProperty("property").GetString() == property);
+    }
+
+    private static void AssertResourceTypeOverride(
+        JsonDocument document,
+        string resource,
+        string property,
+        string shortName,
+        string exclude,
+        string optionalContains)
+    {
+        var resourceType = ResourceType(document, resource, property);
+
+        resourceType.GetProperty("ShortName").GetString().Should().Be(shortName);
+        resourceType.GetProperty("exclude").GetString().Should().Be(exclude);
+        resourceType.GetProperty("optional").GetString().Should().Contain(optionalContains);
     }
 }
