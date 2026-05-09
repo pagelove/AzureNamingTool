@@ -1,1 +1,26 @@
-[{"id":4,"name":"Sample Project/App/Service","shortName":"spa","sortOrder":1}]
+[
+  {
+    "id": 1,
+    "name": "Pagelove Cloud",
+    "shortName": "cloud",
+    "sortOrder": 1
+  },
+  {
+    "id": 2,
+    "name": "Marketing",
+    "shortName": "marketing",
+    "sortOrder": 2
+  },
+  {
+    "id": 3,
+    "name": "Acme",
+    "shortName": "acme",
+    "sortOrder": 3
+  },
+  {
+    "id": 4,
+    "name": "UK Gov Cloud",
+    "shortName": "ukgovcloud",
+    "sortOrder": 4
+  }
+]

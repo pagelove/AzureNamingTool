@@ -9,38 +9,20 @@
     "maxlength": "10"
   },
   {
-    "id": 3,
-    "name": "ResourceOrg",
-    "displayname": "Orgs",
+    "id": 6,
+    "name": "ResourceProjAppSvc",
+    "displayname": "Services",
     "enabled": true,
     "sortOrder": 2,
     "minlength": "1",
-    "maxlength": "5"
-  },
-  {
-    "id": 7,
-    "name": "ResourceUnitDept",
-    "displayname": "Units/Depts",
-    "enabled": true,
-    "sortOrder": 3,
-    "minlength": "1",
-    "maxlength": "5"
-  },
-  {
-    "id": 6,
-    "name": "ResourceProjAppSvc",
-    "displayname": "Projects/Apps/Services",
-    "enabled": true,
-    "sortOrder": 4,
-    "minlength": "1",
-    "maxlength": "3"
+    "maxlength": "10"
   },
   {
     "id": 8,
     "name": "ResourceFunction",
-    "displayname": "Functions",
+    "displayname": "Components",
     "enabled": true,
-    "sortOrder": 5,
+    "sortOrder": 3,
     "minlength": "1",
     "maxlength": "10"
   },
@@ -49,24 +31,42 @@
     "name": "ResourceEnvironment",
     "displayname": "Environments",
     "enabled": true,
-    "sortOrder": 6,
+    "sortOrder": 4,
     "minlength": "1",
-    "maxlength": "5"
+    "maxlength": "6"
   },
   {
     "id": 2,
     "name": "ResourceLocation",
-    "displayname": "Locations",
+    "displayname": "Regions",
     "enabled": true,
-    "sortOrder": 7,
+    "sortOrder": 5,
     "minlength": "1",
-    "maxlength": "10"
+    "maxlength": "6"
   },
   {
     "id": 5,
     "name": "ResourceInstance",
     "displayname": "Instance",
     "enabled": true,
+    "sortOrder": 6,
+    "minlength": "3",
+    "maxlength": "3"
+  },
+  {
+    "id": 3,
+    "name": "ResourceOrg",
+    "displayname": "Orgs",
+    "enabled": false,
+    "sortOrder": 7,
+    "minlength": "1",
+    "maxlength": "5"
+  },
+  {
+    "id": 7,
+    "name": "ResourceUnitDept",
+    "displayname": "Units/Depts",
+    "enabled": false,
     "sortOrder": 8,
     "minlength": "1",
     "maxlength": "5"

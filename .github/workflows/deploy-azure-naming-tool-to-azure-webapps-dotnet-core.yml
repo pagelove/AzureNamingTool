@@ -13,6 +13,7 @@ env:
   DOTNET_VERSION: 10.0.x
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   PROJECT_PATH: src/AzureNamingTool.csproj
+  TEST_PROJECT_PATH: tests/AzureNamingTool.UnitTests/AzureNamingTool.UnitTests.csproj
   PUBLISH_DIR: ${{ github.workspace }}/publish
 
 jobs:
@@ -32,8 +33,14 @@ jobs:
       - name: Restore
         run: dotnet restore ${{ env.PROJECT_PATH }}
 
+      - name: Restore tests
+        run: dotnet restore ${{ env.TEST_PROJECT_PATH }}
+
       - name: Build
         run: dotnet build ${{ env.PROJECT_PATH }} --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test ${{ env.TEST_PROJECT_PATH }} --configuration Release --no-restore --logger "console;verbosity=minimal"
 
       - name: Publish
         run: dotnet publish ${{ env.PROJECT_PATH }} --configuration Release --no-build --output ${{ env.PUBLISH_DIR }}

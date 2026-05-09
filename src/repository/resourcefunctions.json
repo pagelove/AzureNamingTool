@@ -1,8 +1,56 @@
 [
   {
     "id": 1,
-    "name": "Sample Function",
-    "shortName": "func",
+    "name": "Dombase HTTP",
+    "shortName": "domhttp",
     "sortOrder": 1
+  },
+  {
+    "id": 2,
+    "name": "Dombase WebDAV",
+    "shortName": "domdav",
+    "sortOrder": 2
+  },
+  {
+    "id": 3,
+    "name": "Dombase",
+    "shortName": "dom",
+    "sortOrder": 3
+  },
+  {
+    "id": 4,
+    "name": "FoundationDB",
+    "shortName": "fdb",
+    "sortOrder": 4
+  },
+  {
+    "id": 5,
+    "name": "Valkey",
+    "shortName": "vk",
+    "sortOrder": 5
+  },
+  {
+    "id": 6,
+    "name": "Edge",
+    "shortName": "edge",
+    "sortOrder": 6
+  },
+  {
+    "id": 7,
+    "name": "DNS",
+    "shortName": "dns",
+    "sortOrder": 7
+  },
+  {
+    "id": 8,
+    "name": "Artifacts",
+    "shortName": "artifacts",
+    "sortOrder": 8
+  },
+  {
+    "id": 9,
+    "name": "Naming",
+    "shortName": "naming",
+    "sortOrder": 9
   }
 ]
